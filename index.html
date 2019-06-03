@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="row zadanie1 col-7 mx-auto mt-5">
+		<div class="otvert1 ml-5">
+			<img src="door.png" style="height: 400px">
+		</div>
+		<div class="otvert2 ml-5">
+			<img src="door2.png" style="height: 400px">
+		</div>
+		<div class="otvert3 ml-5">
+			<img src="door3.png" style="height: 400px">
+		</div>
+	</div>
+
+	<div style="background-image: url(bg.jpg); display: none; height: 750px; background-size: 100% 100%; " class="zadanie2"> 
+		<div>
+			<h2 class="text-white">Помоги Гарри найт его метлу, плащ и палочку! Надо заработать 3 очка!</h2>
+			<h1 class="text-white nomer">0</h1>
+		</div>
+		<div>
+			<a href=""><button type="button" class="btn btn-success">Выйти из игры</button></a>
+		</div>
+		<div>
+			<div class="row">
+				<div style="margin-left: 200px; margin-top: 500px;position: absolute;" class="item1">
+					<img src="gun.png" style="height: 50px;">
+				</div>
+				<div style="margin-left: 470px; margin-top: 480px;position: absolute;" class="item2">
+					<img src="palochka.png" style="height: 100px;">
+				</div>
+				<div style="margin-left: 960px; margin-top: 480px;position: absolute; " class="item3">
+					<img src="ring.png" style="height: 50px;">
+				</div>
+				<div style="position: absolute; margin-left: 1300px; margin-top: 450px;" class="item4">
+					<img src="metla.png" style="height: 100px;">
+				</div>
+				<div style="margin-left: 100px; margin-top: 400px;position: absolute;" class="item5">
+					<img src="mantiya.png" style="height: 50px;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="background-image: url(bg2.jpg); display: none; height: 750px; background-size: 100% 100%; " class="zadanie3">
+		<div>
+			<h2>Найди 3 спрятанных книг и получи 3 очка!</h2>
+			<h1 class="nomer2">0</h1>
+		</div>
+		<div>
+			<a href=""><button type="button" class="btn btn-success">Выйти из игры</button></a>
+		</div>
+		<div>
+			<div class="row">
+				<div style="margin-left: 100px; margin-top: 280px;position: absolute;" class="book1">
+					<img src="book1.png" style="height: 50px;">
+				</div>
+				<div style="margin-left: 470px; margin-top: 480px;position: absolute;" class="book2">
+					<img src="book2.png" style="height: 100px;">
+				</div>
+				<div style="margin-left: 960px; margin-top: 480px;position: absolute; " class="book3">
+					<img src="book3.png" style="height: 50px;">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		let score = 0;
+		
+		//двери
+		document.querySelector(".otvert1").onclick = function(){
+			alert('Добро пожаловать')
+			document.querySelector(".zadanie1").style.display = "none";
+			document.querySelector(".zadanie2").style.display = "block";
+		}
+		document.querySelector(".otvert2").onclick = function(){
+			alert('Задание 2')
+			document.querySelector(".zadanie1").style.display = "none";
+			document.querySelector(".zadanie3").style.display = "block";
+		}
+		document.querySelector(".otvert3").onclick = function(){
+			alert('Дверь закрыта')
+		}
+		//предметы
+		document.querySelector(".item1").onclick = function(){
+			alert('Нет')
+		}
+		document.querySelector(".item2").onclick = function(){
+			document.querySelector(".item2").style.display = "none";
+			score = score + 1
+			document.querySelector(".nomer").innerHTML = score
+		}
+		document.querySelector(".item3").onclick = function(){
+			alert('Нет')
+		}
+		document.querySelector(".item4").onclick = function(){
+			document.querySelector(".item4").style.display = "none";
+			score = score + 1
+			document.querySelector(".nomer").innerHTML = score
+		}
+		document.querySelector(".item5").onclick = function(){
+			document.querySelector(".item5").style.display = "none";
+			score = score + 1
+			document.querySelector(".nomer").innerHTML = score
+		}
+		//предметы 2
+		document.querySelector(".book1").onclick = function(){
+			document.querySelector(".book1").style.display = "none";
+			score = score + 1
+			document.querySelector(".nomer2").innerHTML = score
+		}
+		document.querySelector(".book2").onclick = function(){
+			document.querySelector(".book2").style.display = "none";
+			score = score + 1
+			document.querySelector(".nomer2").innerHTML = score
+		}
+		document.querySelector(".book3").onclick = function(){
+			document.querySelector(".book3").style.display = "none";
+			score = score + 1
+			document.querySelector(".nomer2").innerHTML = score
+		}
+
+	</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
